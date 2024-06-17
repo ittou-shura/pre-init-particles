@@ -110,7 +110,7 @@ class Effect{
         this.height = this.canvas.height;
         this.width = this.canvas.width;
         this.particles = [];
-        this.numberOfParticles = 400;
+        this.numberOfParticles = 100;
         this.maxLineDist = 80;
         this.angle = 0;
         this.mouse= {
