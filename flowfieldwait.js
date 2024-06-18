@@ -1,3 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const canvas = document.querySelector(".canvas1");
 console.log(canvas);
 const ctx = canvas.getContext("2d");
@@ -103,7 +189,7 @@ class Effect {
     this.height = this.canvas.height;
     this.width = this.canvas.width;
     this.particles = [];
-    this.numberOfParticles = 400;
+    this.numberOfParticles = 80;
     this.maxLineDist = 80;
     this.angle = 0;
     this.mouse = {
