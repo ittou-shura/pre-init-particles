@@ -53,6 +53,7 @@ class Particles {
         this.pushX += Math.cos(angle) * force;
         this.pushY += Math.sin(angle) * force;
       }
+    //   console.log(this.pushX);
     }
 
     this.x += this.pushX + this.vx;
@@ -124,26 +125,28 @@ class Effect {
         this.mouse.y = e.y;
       }
     }); 
-    window.addEventListener("ontouchmove", (e) => {
+    window.addEventListener("touchmove", (e) => {
         if (this.mouse.isPressed) {
-          this.mouse.x = e.x;
-          this.mouse.y = e.y;
+            this.mouse.x = e.changedTouches[0].clientX;
+            this.mouse.y = e.changedTouches[0].clientY;
         }
+        console.log(e);
       });
     window.addEventListener("mousedown", (e) => {
       this.mouse.isPressed = true;
       this.mouse.x = e.x;
       this.mouse.y = e.y;
     });
-    window.addEventListener("ontouchstart", (e) => {
+    window.addEventListener("touchstart", (e) => {
         this.mouse.isPressed = true;
-        this.mouse.x = e.x;
-        this.mouse.y = e.y;
+        this.mouse.x = e.changedTouches[0].clientX;
+        this.mouse.y = e.changedTouches[0].clientY;
+        console.log(e);
       });
     window.addEventListener("mouseup", (e) => {
       this.mouse.isPressed = false;
     });
-    window.addEventListener("ontouchend", (e) => {
+    window.addEventListener("touchend", (e) => {
         this.mouse.isPressed = false;
       });
   }
